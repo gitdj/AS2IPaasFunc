@@ -31,7 +31,7 @@ namespace FunctionAppAS2
                 Uri uri = new Uri("http://localhost:7071/api/AS2Receiver");
                 AS2Send aS2Send = new AS2Send();
 
-                AS2Send.SendFile(uri, "sendmsg", data, "BZIParty2", "BZIParty1", proxySettings, 20000, "", "", @"C:\Users\DanielJonathan\Documents\BZIParty1.cer");
+                AS2Send.SendFile(uri, "sendmsg", data, "BZIParty2", "BZIParty1", proxySettings, 20000, "", "", @"BZIParty1.cer");
 
                 return new OkObjectResult("");
             }
