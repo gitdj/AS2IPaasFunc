@@ -126,7 +126,8 @@ namespace FunctionAppAS2.Helpers
 
             //var byteArrayContent = new ByteArrayContent(content);
 
-            stringConent.Headers.Add("Content-Type", contentType);
+            stringConent.Headers.ContentType=new MediaTypeWithQualityHeaderValue(contentType);
+
             stringConent.Headers.ContentLength = content.Length;
 
             HttpResponseMessage response = _httpClient.PostAsync("", stringConent).Result;  // Blocking call!
